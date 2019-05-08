@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+        <h1>New Host</h1>
+        <form action="/feeds/" method="POST">
+            {% csrf_token %}
+            <p>Title</p>
+            <input name="title" /><br />
+            <p>Content</p>
+            <input name="content" /> <br />
+            <input type="submit" value="submit" />
+        </form>
+    </body>
+
+
+{% endblock %}

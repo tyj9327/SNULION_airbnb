@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>Edit feed</h1>
+    <form action="/feeds/{{feed.id}}/" method="POST">
+        {% csrf_token %}
+        <p>Title</p>
+        <textarea name="title" cols="100" rows="5">{{feed.title}}</textarea> <br />
+        <p>Content</p>
+        <textarea name="content" cols="100" rows="8">{{feed.content}}</textarea> <br />
+        <input type="submit" value="edit" />
+    </form>
+
+{% endblock %}

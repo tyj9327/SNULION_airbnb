@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div>
+        <a href="/feeds">돌아갈래</a>
+        <a href="/feeds/{{ feed.id }}/edit">수정할래</a>
+        <p>Title: {{ feed.title }}</p>
+        <p>Content: {{ feed.content }}</p>
+        <p>수정 날짜: {{ feed.updated_at }}</p>
+        <p>생긴 날짜: {{ feed.created_at }}</p>
+    </div>
+
+{% endblock %}
